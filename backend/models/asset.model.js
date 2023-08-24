@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const assetSchema = new mongoose.Schema({
   type: { type: String, required: true }, // Type of asset (e.g., school, center, office)
@@ -20,9 +20,12 @@ const assetSchema = new mongoose.Schema({
       details: String,
       updatedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Admin' },
     },
-  ]
+  ],
+  state: {type: String, required: true},
+  district: {type: String, required: true},
+  taluk: {type: String, required: true}
 }, { timestamps: true });
 
 const Asset = mongoose.model('Asset', assetSchema);
 
-module.exports = Asset;
+export default Asset;
