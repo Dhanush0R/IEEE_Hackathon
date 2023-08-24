@@ -1,0 +1,50 @@
+/* Header.css */
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container input[type="text"] {
+    padding: 0.3rem;
+  }
+  
+  .search-container button {
+    background-color: #ffee00;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem;
+  }
+  
+  nav a:hover,
+  nav a:active,
+  nav a:focus,
+  nav a.active {
+    background-color: #ffee00;
+    border-radius: 5px;
+  }
