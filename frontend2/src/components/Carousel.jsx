@@ -3,6 +3,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Carousel.css'; // Import the Carousel.css file
+import image1 from '../images/1.jpeg'
 
 const CarouselComponent = () => {
   return (
@@ -10,10 +11,10 @@ const CarouselComponent = () => {
       showArrows={true}
       infiniteLoop={true}
       showThumbs={false}
-      showStatus={false}
+      showStatus={true}
     >
       <div className="carousel-item">
-        <img src={require('../images/1.jpeg').default} alt="Slide 1" />
+        <img src={image1} alt="Slide 1" />
       </div>
       <div className="carousel-item">
         <img src={require('../images/2.jpeg').default} alt="Slide 2" />

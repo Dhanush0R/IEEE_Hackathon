@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Services.css';
 import Footer from './Footer'; 
+import {states, districts, taluks} from '../data/data.js';
 
 const Services = () => {
   const [selectedOption1, setSelectedOption1] = useState('');
@@ -16,10 +17,10 @@ const Services = () => {
           value={selectedOption1}
           onChange={(e) => setSelectedOption1(e.target.value)}
         >
-          <option value="">Select Option 1</option>
-          <option value="option1-1">Option 1-1</option>
-          <option value="option1-2">Option 1-2</option>
-          {/* Add more options */}
+          <option value="">Select State</option>
+          {states.map((state, index) => (
+            <option key = {index} value={state}>{state}</option>
+          ))}
         </select>
       </div>
       <div className="dropdown-container">
@@ -27,10 +28,10 @@ const Services = () => {
           value={selectedOption2}
           onChange={(e) => setSelectedOption2(e.target.value)}
         >
-          <option value="">Select Option 2</option>
-          <option value="option2-1">Option 2-1</option>
-          <option value="option2-2">Option 2-2</option>
-          {/* Add more options */}
+          <option value="">Select District</option>
+          {districts.map((state, index) => (
+            <option key = {index} value={state}>{state}</option>
+          ))}
         </select>
       </div>
       <div className="dropdown-container">
@@ -38,10 +39,10 @@ const Services = () => {
           value={selectedOption3}
           onChange={(e) => setSelectedOption3(e.target.value)}
         >
-          <option value="">Select Option 3</option>
-          <option value="option3-1">Option 3-1</option>
-          <option value="option3-2">Option 3-2</option>
-          {/* Add more options */}
+          <option value="">Select Taluk</option>
+          {taluks.map((state, index) => (
+            <option key = {index} value={state}>{state}</option>
+          ))}
         </select>
       </div>
      

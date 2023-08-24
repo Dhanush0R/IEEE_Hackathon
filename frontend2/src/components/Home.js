@@ -1,6 +1,6 @@
 // Home.js
 import React from 'react';
-import CarouselComponent from './Carousel'; // Import the Carousel component
+import CarouselComponent from './Carousel.jsx'; // Import the Carousel component
 import './Home.css'; // Import the Home.css file
 
 const Home = () => {
