@@ -12,7 +12,7 @@ const AboutUs = () => {
       <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
       </a>
     </header>
-
+    </div>
     <div class="p-5 mb-4 bg-body-tertiary rounded-3 align">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">About Us</h1>
