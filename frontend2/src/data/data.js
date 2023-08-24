@@ -1,4 +1,4 @@
-const districts = [
+const districts_karnataka = [
     "Bagalkote",
     "Ballary",
     "Belagavi",
@@ -63,11 +63,11 @@ const districts = [
     "West Bengal"
   ];
   
-  const taluks = [
+  const taluks_blorerural = [
     "Devanahalli",
     "Doddaballapura",
     "Hosakote",
     "Nelamangala"
   ];
   
-export {states, districts, taluks};
+export {states, districts_karnataka, taluks_blorerural};

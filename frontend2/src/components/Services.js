@@ -2,22 +2,27 @@
 import React, { useState } from 'react';
 import './Services.css';
 import Footer from './Footer'; 
-import {states, districts, taluks} from '../data/data.js';
+import {states, districts_karnataka, taluks_blorerural} from '../data/data.js';
 
 const Services = () => {
-  const [selectedOption1, setSelectedOption1] = useState('');
-  const [selectedOption2, setSelectedOption2] = useState('');
-  const [selectedOption3, setSelectedOption3] = useState('');
+  const [state, setState] = useState('');
+  const [districts, setDistricts] = useState([]);
+  const [taluks, setTaluks] = useState([]);
+  const [district, setDistrict] = useState("Select a District");
+  const [taluk, setTaluk] = useState('');
 
   return (
     <div className="services-container">
       <h2>Services</h2>
       <div className="dropdown-container">
         <select
-          value={selectedOption1}
-          onChange={(e) => setSelectedOption1(e.target.value)}
+          value={state}
+          onChange={(e) => {
+            setState(e.target.value);
+            e.target.value ===  'Karnataka' ? setDistricts(districts_karnataka) : setDistricts([]);
+            }}
         >
-          <option value="">Select State</option>
+          <option key = '-1' value="Select a State">Select State</option>
           {states.map((state, index) => (
             <option key = {index} value={state}>{state}</option>
           ))}
@@ -25,10 +30,13 @@ const Services = () => {
       </div>
       <div className="dropdown-container">
         <select
-          value={selectedOption2}
-          onChange={(e) => setSelectedOption2(e.target.value)}
+          value={district}
+          onChange={(e) => {
+            setDistrict(e.target.value)
+            e.target.value ===  'Bengaluru Rural' ? setTaluks(taluks_blorerural) : setTaluks([]);
+            }}
         >
-          <option value="">Select District</option>
+          <option value="Select a District">Select District</option>
           {districts.map((state, index) => (
             <option key = {index} value={state}>{state}</option>
           ))}
@@ -36,8 +44,8 @@ const Services = () => {
       </div>
       <div className="dropdown-container">
         <select
-          value={selectedOption3}
-          onChange={(e) => setSelectedOption3(e.target.value)}
+          value={taluk}
+          onChange={(e) => setTaluk(e.target.value)}
         >
           <option value="">Select Taluk</option>
           {taluks.map((state, index) => (
