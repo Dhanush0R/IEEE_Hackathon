@@ -1,15 +1,69 @@
 /* AboutUs.css */
-.aboutus-container {
+/* .aboutus-container {
     padding: 20px;
   }
   
-  .aboutus-heading {
-    font-size: 24px;
-    margin-bottom: 10px;
+  .aboutus-heading { */
+    /* font-size: 24px; */
+    /* margin-bottom: 10px;
   }
   
   .aboutus-description {
     font-size: 16px;
     color: #333;
+  } */
+/* AboutUs.css */
+
+/* AboutUs.css */
+
+.aboutus-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.aboutus-heading {
+  font-size: 28px; /* Increased font size */
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.aboutus-description {
+  font-size: 18px; /* Increased font size */
+  line-height: 1.6;
+  margin-bottom: 30px; /* Adjusted margin */
+}
+
+.Who-We-Are, .Our-Mission {
+  font-size: 24px; /* Increased font size */
+  margin-top: 40px; /* Adjusted margin */
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+/* Additional styling for paragraphs within sections */
+.aboutus-container p {
+  font-size: 18px; /* Increased font size */
+  line-height: 1.6;
+  margin-bottom: 25px; /* Adjusted margin */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .aboutus-container {
+    padding: 10px;
   }
-  
+
+  .aboutus-heading {
+    font-size: 24px; /* Adjusted font size */
+  }
+
+  .Who-We-Are, .Our-Mission {
+    font-size: 20px; /* Adjusted font size */
+    margin-top: 30px; /* Adjusted margin */
+  }
+
+  .aboutus-container p {
+    font-size: 16px; /* Adjusted font size */
+    margin-bottom: 20px; /* Adjusted margin */
+  }
+}
+
