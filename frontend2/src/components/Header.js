@@ -1,6 +1,6 @@
 // Header.js
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import the Link component
+import { Link } from 'react-router-dom'; 
 import './Header.css';
 
 const Header = () => {
@@ -8,14 +8,11 @@ const Header = () => {
     <header>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link> 
+        <Link to="/about">About Us</Link>
+        <Link to="/services">Assets</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/services">Services</Link>
+        <Link to="/login" className="login-button">Login</Link>
       </nav>
-      <div className="search-container">
-        <input type="text" placeholder="Search..." />
-        <button>Search</button>
-      </div>
     </header>
   );
 };

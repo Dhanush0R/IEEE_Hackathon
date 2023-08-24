@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="aboutus-container">
       <h1 className="aboutus-heading">About Us</h1>
-      <p className="aboutus-description">Welcome to our About Us page. We are...</p>
+      <p className="aboutus-description"></p>
     </div>
   );
 };
