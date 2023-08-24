@@ -6,10 +6,12 @@ import Asset from '../models/asset.model.js';
 const getAssets = async (req, res) => {
     const queries = req.query.query;
     const state = req.query.state;
-    const district = req.query.district;
-    console.log(district);
-    const taluk = req.query.taluk;
-    console.log(queries);
+    let district = req.query.district;
+    if(!district) 
+        district = '';
+    let taluk = req.query.taluk;
+    if(!taluk)
+        taluk = '';
     try {
         const queryArray = queries && queries.split(',').map(query => query.trim());
     
@@ -27,6 +29,7 @@ const getAssets = async (req, res) => {
         });
     
         res.status(200).json(assets);
+        return assets;
       } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Error fetching assets.' });

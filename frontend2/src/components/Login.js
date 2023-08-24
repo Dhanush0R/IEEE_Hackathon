@@ -3,14 +3,41 @@ import React, { useState } from 'react';
 import './Login.css'; // Import the Login.css file
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform authentication logic here (e.g., check username and password)
-    console.log('Username:', username);
-    console.log('Password:', password);
+    const requestData = {
+      email: email,
+      password: password
+    };
+
+    fetch('/api/admin/auth', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        
+        if (data.login) {
+          console.log("Succesfully Logged In");
+          localStorage.setItem('jwtToken', data.token);
+        } else {
+          console.log("Invalid Login Credentials");
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        // Handle other errors
+      });
+    // console.log('Username:', username);
+    // console.log('Password:', password);
   };
 
   return (
@@ -19,12 +46,12 @@ const Login = () => {
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="email">Username</label>
           <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div>

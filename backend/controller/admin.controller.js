@@ -7,15 +7,17 @@ const authAdmin = async (req, res) => {
     const {email, password} = req.body;
     const admin = await Admin.findOne({email: email});
     if(admin && (await admin.matchPassword(password))){
-        const token = jwt.sign({adminID: admin._id, name: admin.name, email: admin.email}, process.env.JWT_SECRET)
+        const token = jwt.sign({adminID: admin._id, name: admin.name, email: admin.email}, process.env.JWT_SECRET, {expiresIn: '1h'})
         res.status(201).json({
             _id: admin._id,
             name: admin.name,
-            email: admin.email
+            email: admin.email,
+            login: true,
+            token: token
         })
     }
     else{
-        res.status(401).json({message: "Invalid login details"});
+        res.status(401).json({message: "Invalid login details", login: false});
         //throw new Error("Invalid login credentials");
     }
 };

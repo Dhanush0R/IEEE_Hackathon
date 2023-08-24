@@ -29,9 +29,13 @@ const Services = () => {
         link += "&taluk="+taluk;
       }
       console.log(link);
-      axios.get(link).then((response) => {
-        console.log(response)
-      })
+      // axios.get(link).then((response) => {
+      //   console.log(response)
+      // })
+      fetch("http://localhost:5000"+link)
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((err) => {console.log(err)});
     }
     
   },[state,district,taluk])
