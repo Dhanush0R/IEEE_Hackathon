@@ -5,8 +5,8 @@ import Header from './components/Header';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
-import Contact from './components/Contact';
 import Login from './components/Login'; 
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
             <Route exact path="/" element={<Home/>} />
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/services"element={<Services/>} />
-            <Route path="/contact" element={<Contact/>} />
             <Route path="/login"element={<Login/>} /> 
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );

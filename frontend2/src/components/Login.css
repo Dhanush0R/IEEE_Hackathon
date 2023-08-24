@@ -3,9 +3,9 @@ form {
     max-width: 300px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #fdff9d;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
   }
   
   label {
@@ -36,20 +36,18 @@ form {
   button:hover {
     background-color: #ffee00;
   }
-  
-  /* Login.css */
-/* Login.css */
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #fff268;
   }
   
   .login-form {
     width: 300px;
-    height: 300px; /* Set the height to match the width for a square box */
+    height: 300px; 
     padding: 20px;
     background-color: white;
     border-radius: 5px;
@@ -59,9 +57,3 @@ form {
     align-items: center;
     justify-content: center;
   }
-  
-  /* ... other styles ... */
-  
-  
-  /* ... other styles ... */
-  
