@@ -1,6 +1,6 @@
 // Services.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import './Services.css';
 import Footer from './Footer'; 
 import {states, districts_karnataka, taluks_blorerural} from '../data/data.js';
@@ -44,7 +44,7 @@ const Services = () => {
   }
   return (
     <div className="services-container">
-      <h2>Services</h2>
+      <h2>Asset Details</h2>
       <div className="dropdown-container">
         <select
           value={state}
