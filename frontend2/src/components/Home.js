@@ -1,11 +1,14 @@
 // Home.js
 import React from 'react';
+import CarouselComponent from './Carousel'; // Import the Carousel component
+import './Home.css'; // Import the Home.css file
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to Our Website</h1>
-      <p></p>
+    <div className="home-container">
+      <h2>Welcome to Our Website</h2>
+      <CarouselComponent /> {/* Use the Carousel component */}
+      {/* Other content */}
     </div>
   );
 };

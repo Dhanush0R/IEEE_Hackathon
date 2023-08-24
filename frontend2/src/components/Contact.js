@@ -1,6 +1,6 @@
 // Contact.js
 import React from 'react';
-import './Contact.css'; // Import the Contact.css file
+import './Contact.css';
 
 const Contact = () => {
   return (
