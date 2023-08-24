@@ -12,12 +12,12 @@ const AboutUs = () => {
       <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
       </a>
     </header>
-
+    </div>
     <div class="p-5 mb-4 bg-body-tertiary rounded-3 align">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">About Us</h1>
         <p class="col-md-8 fs-4">Welcome to the Government Asset Management Web App - your comprehensive solution for efficiently managing educational assets across India. Our platform addresses the complex task of overseeing a vast network of educational institutions, offices, and centers. With a user-friendly interface and robust features, we empower both Central and State Governments to seamlessly manage their assets and make informed decisions.</p>
-      </div>
+
     </div>
 
     <div class="row align-items-md-stretch align">
