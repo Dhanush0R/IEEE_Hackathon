@@ -18,7 +18,7 @@ const assetSchema = new mongoose.Schema({
       timestamp: { type: Date, default: Date.now },
       actionType: { type: String, required: true },
       details: String,
-      updatedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'Admin' },
+      updatedBy: { type: String },
     },
   ],
   state: {type: String, required: true},
