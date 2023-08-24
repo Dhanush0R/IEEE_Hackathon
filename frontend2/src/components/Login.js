@@ -1,8 +1,10 @@
 // Login.js
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 import './Login.css'; // Import the Login.css file
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,6 +30,7 @@ const Login = () => {
         if (data.login) {
           console.log("Succesfully Logged In");
           localStorage.setItem('jwtToken', data.token);
+          navigate('/');
         } else {
           console.log("Invalid Login Credentials");
         }
