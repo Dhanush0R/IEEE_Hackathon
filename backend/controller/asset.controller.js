@@ -78,30 +78,48 @@ const addAsset = async (req, res) => {
 };
 
 // @desc Update an Asset
-// route POST /api/assets
+// route PATCH /api/assets/:assetId
 // @access Admin
 const updateAsset = async (req, res) => {
-    const newAsset = new Asset({
-        type: req.body.type,
-        name: req.body.name,
-        location: req.body.location,
-        latitude: req.body.latitude,
-        longitude: req.body.longitude,
-        size: req.body.size,
-        yearOfConstruction: req.body.yearOfConstruction,
-        capacity: req.body.capacity,
-        rooms: req.body.rooms,
-        labs: req.body.labs,
-        maintananceRequired: req.body.maintananceRequired,
-        presentUse: req.body.presentUse,
-        actionHistory: [],
-        state: req.body.state,
-        district: req.body.district,
-        taluk: req.body.taluk
-    })
-    newAsset.save()
-    .then(() => {return res.json("New asset added!")})
-    .catch((err) => {return res.status(400).json('Error: '+ err)})
+    const assetId = req.params.assetId;
+    const action = {actionType: 'updated xyz', details: 'abcd', updatedBy: 'user'};
+    const {type,name,location,latitude,longitude,size,yearOfConstruction,capacity,rooms,labs,maintananceRequired,presentUse,state,district,taluk} = req.body;
+    try{
+        //const asset = await Asset.findById(assetId);
+        const updatedAsset = await Asset.findByIdAndUpdate(assetId,
+            {
+            $set: {
+                 type,
+                 name,
+                 location,
+                 latitude,
+                 longitude,
+                 size,
+                 yearOfConstruction,
+                 capacity,
+                 rooms,
+                 labs,
+                 maintananceRequired,
+                 presentUse,
+                state,
+                 district,
+                 taluk
+            },
+            $push: { actionHistory: action },
+        },
+        {new: true})
+        if (!updatedAsset) {
+            return res.status(404).json({ message: 'Asset not found' });
+          }
+      
+          res.status(200).json(updatedAsset);
+    }
+    catch(error){
+        console.error(error);
+        res.status(500).json({ message: 'Error fetching assets.' });
+    }
+    
+    
 };
 
 // @desc Delete Asset by ID
@@ -120,4 +138,4 @@ const delAsset = async (req, res) => {
       }
 };
 
-export {getAssets, getAssetById, addAsset, delAsset}
+export {getAssets, getAssetById, addAsset, updateAsset, delAsset}
