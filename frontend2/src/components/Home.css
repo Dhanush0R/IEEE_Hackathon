@@ -1,7 +1,11 @@
 /* Home.css */
 .home-container {
-    padding: 20px;
-  }
-  
-  /* Customize home page styling here */
-  
+  padding: 20px;
+  text-align: center;
+}
+
+.header-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; /* Add margin to create space between the header and the image */
+}

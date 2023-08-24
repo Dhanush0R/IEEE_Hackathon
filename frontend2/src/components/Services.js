@@ -10,7 +10,7 @@ const Services = () => {
 
   return (
     <div className="services-container">
-      <h2>Services</h2>
+      <h2>Asset Details</h2>
       <div className="dropdown-container">
         <select
           value={selectedOption1}
