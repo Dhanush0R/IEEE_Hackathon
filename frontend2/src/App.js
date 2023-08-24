@@ -21,11 +21,7 @@ function App() {
             <Route path="/services"element={<Services/>} />
             <Route path="/login"element={<Login/>} /> 
           </Routes>
-          <img
-          className="page-image"
-          src="3.jpeg"  // Replace with the actual path to your image
-          alt="Page Image"
-        />
+          
         </main>
         <Footer />
       </div>

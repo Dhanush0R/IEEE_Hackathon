@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="aboutus-container">
     
-<main>
+
   <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
@@ -38,7 +38,7 @@ const AboutUs = () => {
     <footer class="pt-3 mt-4 text-body-secondary border-top">
     </footer>
   </div>
-</main>
+
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
  
 </div>
