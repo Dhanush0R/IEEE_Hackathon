@@ -1,0 +1,19 @@
+/* WideBar.css */
+.wide-bar {
+    width: 96%;
+    height: 3rem; /* Adjust the width as needed */
+    margin-top: 6px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bar-title {
+    /* flex: auto; */
+    
+    font-size: 18px;
+    text-align: left;  
+  }
+  
+  
