@@ -1,7 +1,7 @@
 // Home.js
 import React from 'react';
 
-import LeafletComponent from './LeafletComponent.jsx'
+
 import './Home.css'; // Import the Home.css file
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
           src="3.jpeg"  // Replace with the actual path to your image
           alt="Page Image"
         />
-      <LeafletComponent /> 
+      
       {/* Other content */}
     </div>
   );

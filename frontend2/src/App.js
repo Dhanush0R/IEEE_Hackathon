@@ -7,6 +7,7 @@ import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import Login from './components/Login'; 
 import Footer from './components/Footer';
+import AssetDetailsPage from './components/AssetDetails';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<AboutUs/>} />
             <Route path="/services"element={<Services/>} />
             <Route path="/login"element={<Login/>} /> 
+            <Route path="/asset/:id" element={<AssetDetailsPage />} /> 
           </Routes>
           
         </main>

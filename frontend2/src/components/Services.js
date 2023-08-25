@@ -1,6 +1,7 @@
 // Services.js
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Services.css';
 import Footer from './Footer'; 
 import {states, districts_karnataka, taluks_blorerural} from '../data/data.js';
@@ -92,7 +93,21 @@ const Services = () => {
       </div>
         {dataArray.map((data, index) =>{
         console.log(data);
-        return (<WideBar key = {index} title = {data.name} > </WideBar>)
+        return (
+          
+          <Link
+            key={index}
+            to={{
+              pathname: `/asset/${data._id}`, // Specify the URL with asset ID
+              state: { assetData: data } // Pass asset data to location state
+            }}
+            className="wide-bar-link" // Add a CSS class for styling
+          >
+            <WideBar key = {index} title = {data.name} children = {"View Details>>>"} > </WideBar>
+            </Link>
+          
+          
+          )
       })}
       <LeafletComponent /> 
     </div>

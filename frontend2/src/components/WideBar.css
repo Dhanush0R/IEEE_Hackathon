@@ -15,5 +15,16 @@
     font-size: 18px;
     text-align: left;  
   }
+  .bar-content {
+    /* flex: auto; */
+    
+    font-size: 12px;
+    text-align: right;  
+  }
   
+  .wide-bar-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link a block element for clickable area */
+  }
   
