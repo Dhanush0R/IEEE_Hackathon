@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import './Services.css';
 import Footer from './Footer'; 
 import {states, districts_karnataka, taluks_blorerural} from '../data/data.js';
+import WideBar from './WideBar';
+import LeafletComponent from './LeafletComponent.jsx';
 
 const Services = () => {
   const [state, setState] = useState('');
@@ -11,6 +13,7 @@ const Services = () => {
   const [taluks, setTaluks] = useState([]);
   const [district, setDistrict] = useState("");
   const [taluk, setTaluk] = useState('');
+  const [dataArray, setDataArray] = useState([])
 
   useEffect(() => {
     let link = "/api/asset";
@@ -34,7 +37,10 @@ const Services = () => {
       // })
       fetch("http://localhost:5000"+link)
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        setDataArray(data)
+        console.log(data)
+      })
       .catch((err) => {console.log(err)});
     }
     
@@ -84,7 +90,11 @@ const Services = () => {
           ))}
         </select>
       </div>
-     
+        {dataArray.map((data, index) =>{
+        console.log(data);
+        return (<WideBar key = {index} title = {data.name} > </WideBar>)
+      })}
+      <LeafletComponent /> 
     </div>
   );
 };

@@ -1,8 +1,8 @@
 /* WideBar.css */
 .wide-bar {
-    width: 96%;
+    width: calc(100% - 40px);
     height: 3rem; /* Adjust the width as needed */
-    margin-top: 6px;
+    margin-top: 10px;
     background-color: #f0f0f0;
     border-radius: 4px;
     padding: 20px;
