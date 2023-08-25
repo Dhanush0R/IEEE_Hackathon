@@ -99,7 +99,7 @@ const Services = () => {
             key={index}
             to={{
               pathname: `/asset/${data._id}`, // Specify the URL with asset ID
-              state: { assetData: data } // Pass asset data to location state
+              state: {data} // Pass asset data to location state
             }}
             className="wide-bar-link" // Add a CSS class for styling
           >

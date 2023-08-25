@@ -24,3 +24,6 @@
     width: calc(100% - 40px);
     
   }
+  .btn {
+    margin-left: 1300px;
+  }

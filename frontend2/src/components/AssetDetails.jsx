@@ -1,7 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+function AssetDetailsPage() {
+    const location = useLocation(); // Use the useLocation hook to access location object
+    console.log(location);
+    const assetData = location.state ? location.state.assetData : null;
 
-function AssetDetailsPage({ location }) {
-  const assetData = location.state.assetData;
+  if (!assetData) {
+    return <div>Loading...</div>; // Handle loading state if needed
+  }
 
   return (
     <div className="asset-details">

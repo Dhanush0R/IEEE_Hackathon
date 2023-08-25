@@ -22,7 +22,9 @@ const Header = () => {
         <Link to="/about">About Us</Link>
         <Link to="/services">Assets</Link>
         {/* <Link to="/contact">Contact</Link> */}
+        {jwtToken && (<Link to="/asset/add" className="">Add Asset</Link>)}
         {jwtToken ? (<Link onClick = {() => {localStorage.removeItem('jwtToken');}} >Logout {adminName} </Link>):(<Link to="/login" className="login-button">Login</Link>)}
+        
         </div>
       
       </nav>
